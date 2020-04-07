@@ -17,5 +17,5 @@ sector = [1,2,3,4]
 
 for f in range(len(arr_tic_id)):
         tic_id = arr_tic_id[f]
-        print("\nSearching for TIC ID %u" %tic_id)
+        print("\n(%d/%d) Searching for TIC ID %u" %(f+1,len(arr_tic_id),tic_id))
         lk.search_lightcurvefile("TIC" + str(tic_id), sector=sector).download_all(download_dir=download_dest)
